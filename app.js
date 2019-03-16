@@ -20,7 +20,8 @@ var commentsRoutes = require("./routes/comments"),
 
 // seedDb();
 
-mongoose.connect("mongodb://localhost/restful_blog_app");
+// mongoose.connect("mongodb://localhost/restful_blog_app");
+mongoose.connect("mongodb+srv://shivani31:hello@englishlearnercluster-sabks.mongodb.net/test?retryWrites=true");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());
 app.set("view engine", "ejs");
