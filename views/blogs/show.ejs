@@ -1,0 +1,83 @@
+<% include ../partials/header %>
+<div class="ui main container grid">
+    <div class="row">
+        <div class="four wide column segment">
+          <p class="label">Featured Posts</p>
+          <div class = "ui vertical menu">
+              <li class="item active">Info 1</li>
+              <li class="item">Info 1</li>
+              <li class="item">Info 1</li>
+              <li class="item">Info 1</li>
+              <li class="item">Info 1</li>
+          </div>
+        </div>
+        <div class="twelve wide column">
+            <div class="ui main text container segment">
+                
+                    <div>
+                        <img src="<%= blogs.image %> ">
+                        <h3 class="ui header">
+                            <a><%= blogs.name %></a>
+                        </h3>
+                            <span class="floated caption"><%= blogs.created.toDateString() %></span>
+                        
+                        <div class = "content">
+                             <!--<h3 </h3>-->
+                             <div class = "description pad">
+                             <p><%- blogs.body %></p>
+                             <p>
+                                 <em> </em>Submitted By <%= blogs.author.username %> </em>
+                                 </p>
+                            </div>
+                            <% if(currentUser && blogs.author.id.equals(currentUser._id)){ %>
+                                <a href="/blogs/<%=blogs._id%>/edit" class= "ui yellow mini button">EDIT</a>
+                                <form class = "del" method="POST" action="/blogs/<%=blogs._id%>?_method=DELETE">
+                                    <button class= "ui red mini button">DELETE</button>
+                                </form>
+                             <% } %> 
+                            
+                        </div>
+                        
+                    </div>
+                
+            </div>
+                
+                
+                    <div class = "ui main text container secondary segment">
+                        <p>
+                            
+                            <form class= "ui form" method="POST" action="/blogs/<%=blogs._id%>/comments" >
+                                <div class = "field">
+                                   <input type="text" name="comment[text]" placeholder="type here...">
+                                </div>
+                                <button class = "ui positive right floated button"  type = "submit">Add a comment</button>
+                            </form>
+
+                        <div class="ui items" id="com">
+                            <% blogs.comments.forEach(function(comment){ %>
+                                <div class="item">
+                                    <div class = "content">
+                                        <p><strong><%= comment.author.username %></strong>
+                                        <span class="ui right floated">10 days ago</span><br>
+                                            <%= comment.text %> 
+                                        </p>
+                                          <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                                        <a class="ui mini button yellow" href="/blogs/<%= blogs._id %>/comments/<%= comment._id %>/edit">Edit</a>
+                                        <form class = "del" action="/blogs/<%= blogs._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                            <button class="ui mini button red" type="submit">Delete</button>
+                                            <!--<input type="submit" value="Delete">-->
+                                        </form>
+                                        <% } %>
+                                     </div>
+                                </div>
+                            <% }) %>
+                        </div>
+                    </div>
+                    
+        </div>
+    </div>
+</div>
+
+
+
+<% include ../partials/footer %>

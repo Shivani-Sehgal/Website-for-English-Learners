@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fluent You</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+        <link type="text/css" rel="stylesheet" href="/stylesheets/app.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+                <div class="ui inverted fixed menu">
+            <div class="ui container">
+                <div class="header item"> <i class="paper plane outline icon"></i> Fluent You </div>
+                <a href="/" class="item"> Home</a>
+                <a href="/blogs/new" class="item"> New Post </a>
+                <a href="/input" class="item"> Check Your Grammar</a>
+                <a href="/vocab" class="item"> Vocabulary Game </a>
+                <div class="right menu">
+                    <% if(!currentUser){ %>
+                    <a href="/register" class="ui item">Sign Up</a>
+                    <a href="/login" class="ui item">Login</a>
+                    <% }else{ %>
+                    <a href="#" class="ui item">Logged in as <%= currentUser.username%></a>
+                    <a href="/logout" class="ui item">Logout</a>
+                    <% } %>
+                </div>
+
+            </div>
+        </div>
+    
+    <div class="container">
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+    sss
+    <div id="landing-header">
+ 		<h1>Welcome to FluentYou!</h1>
+ 		<h3>Your One Stop English Learning Center.</h3>
+		<a href="/blogs" class="btn btn-lg btn-primary">Get Started</a>
+    </div>
+    
+    <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>

@@ -1,0 +1,19 @@
+<% include partials/header %>
+<div id="upper">
+    <h1>Not sure if you are saying it right ?</h1>
+    <h2>Here's some help <br> Type anything you want a second opinion on.
+    <br>We'll check your input for potential grammatical errors</h2>
+</div>
+<div class = "ui main text container form">
+    <form action="/result" method="GET">
+        <div class="field">
+            <label></label>
+            <textarea rows="2" type="text" placeholder="Type here.." name="check"></textarea>
+        </div>
+        <div class="field">
+        <div> <input type="submit" class="ui big basic centered primary fluid button" value="Check"> </div>
+        </div>
+    </form>
+</div>
+
+<% include partials/footer %>

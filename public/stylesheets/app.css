@@ -1,0 +1,50 @@
+/*body{*/
+/*    background: #eee2dc;*/
+/*}*/
+#buttonColor{
+    color: #ac3b61;
+}
+#upper h2{
+    line-height: 1.5em;
+}
+/*.navbar-collapse.collapse{*/
+/*    background:#123c69;*/
+/*    color: white;*/
+/*}*/
+#upper{
+    color: white;
+	font-weight: normal;
+	text-align: center;
+	background-color: #123c69; 
+	height: 30%;
+	margin: 0px;
+	padding: 50px 0;
+	transition: all 0.5s;s
+}
+
+.ui.menu>.container{
+    background: #123c69;
+    width:100%;
+} 
+    i.icon {
+    font-size: 2em;
+}
+.container.main{
+    margin: 5em;
+}
+.del{
+    display: inline;
+}
+
+#com{
+    padding-top: 2.5em;
+}
+
+.ui .segment img{
+    width: 100%;
+    padding: 0;
+}
+
+.pad{
+    padding-bottom: 1.5em;
+}

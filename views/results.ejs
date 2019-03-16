@@ -1,0 +1,17 @@
+<% include partials/header %>
+<div class = "ui main text container segment">
+    <h1>Result</h1>
+
+    <h3>Errors</h3>
+        <% data["errors"].forEach(function(err){ %>
+        <ul>
+            <li><strong> <%= err["bad"] %> </strong> - <%= err["better"] %></li>
+        </ul>
+    
+    <% }) %>
+
+    
+</div>
+<% include partials/footer %>
+
+
