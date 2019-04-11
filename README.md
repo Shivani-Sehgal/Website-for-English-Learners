@@ -23,3 +23,6 @@ A test which evaluates the user’s input and gives a score on the basis of gram
 and punctuation errors. For every wrong answer, the user will get a list of errors and
 recommended changes. This has been implemented using text gear API (https://textgears.com/api/).
 
+<br>
+<strong> Link: </strong> https://radiant-lake-34323.herokuapp.com
+
