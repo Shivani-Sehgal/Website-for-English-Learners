@@ -11,9 +11,9 @@ Users can Create, Remove, Update and Delete blogs and comments. REST routing con
 User authentication is a process that allows a device to verify the identity of someone who
 connects to a network resource. User authorization drefrs to deciding what a user is allowed to do.
 Three Levels of Permission –
-  1 All users are allowed to read blogs and comments when not logged in.
-  2 A User cannot create a blog or comment if not logged in.
-  3 A user can edit and update a blog or comment only if he owns it.
+ <br>1 All users are allowed to read blogs and comments when not logged in.
+ <br>2 A User cannot create a blog or comment if not logged in.
+ <br>3 A user can edit and update a blog or comment only if he owns it.
 
 3. Vocabulary builder game
 An interactive javascript guessing game to help users improve their vocabulary made using DOM Manipulation and event handling concepts.
